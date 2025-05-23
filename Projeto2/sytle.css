@@ -1,0 +1,196 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #d4af37; /* Dourado */
+  line-height: 1.2;
+}
+
+/* Container geral */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Total acumulado */
+.total p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #d4af37;
+}
+
+/* Cofre com imagem e nível */
+.cofre-imagem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cofre-imagem img {
+  width: 150px;
+  height: auto;
+  z-index: 1;
+}
+
+/* Barra de enchimento do cofre */
+#nivel-cofre {
+  position: absolute;
+  bottom: 15px;
+  width: 60px;
+  background-color: gold;
+  height: 0;
+  transition: height 0.4s ease-in-out;
+  z-index: 0;
+}
+
+/* Botões de moedas */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.botoes button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+  background-color: #45a049;
+}
+
+/* Campo valor digitado e saque */
+.campo-manual,
+.campo-saque {
+  margin: 20px 0;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 200px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.campo-manual button,
+.campo-saque button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.campo-manual button:hover,
+.campo-saque button:hover {
+  background-color: #1976d2;
+}
+
+/* Gráfico de pizza */
+#graficoPizza {
+  margin: 20px auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .cofre-imagem img {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .botoes button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .campo-manual input[type="number"],
+  .campo-saque input[type="number"] {
+    width: 150px;
+  }
+
+  .campo-manual button,
+  .campo-saque button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .cofre-imagem img {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .botoes button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .campo-manual input[type="number"],
+  .campo-saque input[type="number"] {
+    width: 120px;
+  }
+
+  .campo-manual button,
+  .campo-saque button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+

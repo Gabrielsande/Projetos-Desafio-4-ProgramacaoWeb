@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer com Jorge & Mateus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="pomodoro-wrapper">
+      <!-- Pomodoro Timer -->
+      <div class="timer-section">
+        <h1>Pomodoro Timer</h1>
+        <div id="timer" class="timer">25:00</div>
+
+        <div class="time-adjust">
+          <button onclick="adjustTime(-5)">-5 min</button>
+          <button onclick="adjustTime(5)">+5 min</button>
+        </div>
+
+        <div class="timer-actions">
+          <button onclick="startTimer()" id="start-btn">Iniciar</button>
+          <button onclick="pauseTimer()" id="pause-btn" disabled>Pausar</button>
+        </div>
+
+        <div class="reset">
+          <button onclick="resetTimer()">Resetar</button>
+        </div>
+      </div>
+
+      <!-- Spotify Playlist -->
+      <div class="spotify-section">
+        <iframe 
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO0FsQXS?si=FP8KTPDLTP6B5eexoEojWg" 
+          frameborder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy" 
+          style="width: 100%; height: 380px;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleDarkMode()">🌙/☀️</button>
+
+  <script src="js.js"></script>
+</body>
+</html>

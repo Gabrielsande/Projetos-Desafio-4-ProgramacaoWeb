@@ -1,0 +1,137 @@
+/* Estilo geral da página */
+body {
+  font-family: 'Baloo 2', cursive; /* Fonte personalizada */
+  background: linear-gradient(120deg, #ffcc70, #c850c0); /* Fundo degradê */
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
+  display: flex; /* Usa flexbox para centralizar conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Altura total da viewport */
+}
+
+/* Estilo do container principal */
+.container {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 2rem; /* Espaçamento interno */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra */
+  text-align: center; /* Texto centralizado */
+  max-width: 500px; /* Largura máxima */
+  width: 90%; /* Largura responsiva */
+}
+
+/* Estilo do título principal */
+h1 {
+  font-size: 2rem; /* Tamanho da fonte */
+  margin-bottom: 1.5rem; /* Espaço abaixo */
+  color: #333; /* Cor do texto */
+}
+
+/* Área que contém os botões */
+.buttons {
+  display: flex; /* Usa flexbox para botões */
+  justify-content: space-around; /* Espaço igual entre os botões */
+  margin-bottom: 1.5rem; /* Espaço abaixo */
+}
+
+/* Estilo dos botões de escolha */
+.choice {
+  background: #ffffff; /* Fundo branco */
+  border: 3px solid #333; /* Borda */
+  border-radius: 15px; /* Bordas arredondadas */
+  padding: 10px; /* Espaçamento interno */
+  width: 100px; /* Largura fixa */
+  transition: transform 0.2s, box-shadow 0.2s; /* Animação suave */
+  cursor: pointer; /* Cursor de mão ao passar */
+  display: flex; /* Flexbox interno para alinhar */
+  flex-direction: column; /* Itens em coluna */
+  align-items: center; /* Centraliza conteúdo */
+}
+
+/* Efeito hover nos botões */
+.choice:hover {
+  transform: scale(1.1); /* Aumenta o botão */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Sombra */
+}
+
+/* Tamanho das imagens dentro dos botões */
+.choice img {
+  width: 60px;
+  height: 60px;
+}
+
+/* Espaço e tamanho do texto dos botões */
+.choice span {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* Parágrafos das áreas de resultados e placar */
+.results p, .scoreboard p {
+  margin: 0.5rem 0; /* Espaço vertical */
+  font-size: 1.1rem; /* Tamanho da fonte */
+}
+
+/* Título do placar */
+.scoreboard h2 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* Botão de reiniciar */
+.exit {
+  margin-top: 1.5rem; /* Espaço acima */
+  padding: 0.6rem 1.2rem; /* Espaçamento interno */
+  background-color: #e63946; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-weight: bold; /* Texto em negrito */
+  border: none; /* Sem borda */
+  border-radius: 10px; /* Bordas arredondadas */
+  font-size: 1rem;
+  cursor: pointer; /* Cursor de mão */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Efeito hover no botão reiniciar */
+.exit:hover {
+  background-color: #b71c1c; /* Cor mais escura */
+}
+
+/* Tela de carregamento */
+#loading-screen {
+  position: fixed; /* Fixa na tela */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: #111; /* Fundo escuro */
+  color: white; /* Texto branco */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Conteúdo em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  z-index: 9999; /* Fica acima de tudo */
+}
+
+/* Estilo do loader - círculo giratório */
+.loader {
+  border: 12px solid #000000; /* Borda preta */
+  border-top: 12px solid #ffffff; /* Borda superior branca para animação */
+  border-radius: 50%; /* Circulo */
+  width: 80px; /* Largura */
+  height: 80px; /* Altura */
+  animation: spin 1s linear infinite; /* Animação de rotação */
+  margin-bottom: 1rem; /* Espaço abaixo */
+}
+
+/* Define a animação de rotação */
+@keyframes spin {
+  to {
+    transform: rotate(360deg); /* Gira 360 graus */
+  }
+}

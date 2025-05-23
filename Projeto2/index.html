@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cofrinho Digital</title>
+  <link rel="stylesheet" href="sytle.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <h1>Cofrinho Digital 🐷</h1>
+
+  <div class="container">
+    <div class="total">
+      <p>Total acumulado: <span id="total">R$ 0,00</span></p>
+    </div>
+
+    <div class="cofre-imagem">
+      <img id="cofre" src="img/299b42dd-7faa-4e2c-9a4f-3ff9c8c27cd6.jpg" alt="Cofre">
+      <div id="nivel-cofre"></div>
+    </div>
+
+    <div class="botoes">
+      <button onclick="adicionarMoeda(0.10)">Adicionar R$0,10</button>
+      <button onclick="adicionarMoeda(0.25)">Adicionar R$0,25</button>
+      <button onclick="adicionarMoeda(0.50)">Adicionar R$0,50</button>
+      <button onclick="adicionarMoeda(1.00)">Adicionar R$1,00</button>
+      <button onclick="esvaziarCofre()">Esvaziar Cofre</button>
+    </div>
+
+    <!-- <div id="contador-moedas"></div> -->
+  </div>
+
+<canvas id="graficoPizza" width="250" height="250"></canvas>
+
+
+<div class="campo-manual">
+  <input type="number" id="valorDigitado" placeholder="Digite um valor" step="0.01" min="0">
+  <button onclick="adicionarValorDigitado()">Adicionar valor digitado</button>
+</div>
+     
+
+
+   <div class="campo-saque">
+  <input type="number" id="valorSaque" placeholder="Valor para sacar" step="0.01" min="0">
+  <button onclick="sacarValor()">Sacar</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script src="js.js"></script>
+</body>
+</html>

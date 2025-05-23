@@ -1,0 +1,103 @@
+/* Estilos básicos para o corpo e o HTML */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo da página com imagem e transição suave */
+.fundo {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('plano-de-fundo-para-chamadas-de-zoom-com-estante.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.5s ease;
+}
+
+/* Quando estiver escuro (luz apagada), a imagem do fundo fica escurecida */
+.escuro {
+  filter: brightness(30%);
+}
+
+/* Lâmpada posicionada no topo e centralizada */
+#lampada {
+  position: absolute;
+  top: 0; /* Coloca a lâmpada no topo da tela */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  transition: opacity 0.3s ease;
+}
+
+/* Caixa do interruptor */
+.interruptor-container {
+  position: absolute;
+  top: 20px;
+  left: 150px;
+  width: 40px;
+  height: 90px;
+  background-color: #ccc;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Botão interno do interruptor */
+.botao {
+  width: 30px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+  transition: top 0.3s;
+}
+
+/* Quando a classe 'ligado' é ativada, o botão desce */
+.ligado .botao {
+  top: 70px;
+}
+
+/* Botão que exibe a contagem de vezes que a luz foi acesa */
+.contador-btn {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.4);
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+/* Efeito hover no botão de contagem */
+.contador-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Área que mostra a contagem com fonte personalizada */
+#contadorDisplay {
+  position: absolute;
+  top: 200px;
+  left: 250px;
+  font-size: 40px;
+  color: brown;
+  font-weight: bold;
+  user-select: none;
+  transition: 0.8s;
+  font-family: 'Poetsen One', cursive;
+}

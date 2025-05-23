@@ -1,0 +1,145 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pomodoro-wrapper {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Timer */
+.timer {
+  font-size: 4rem;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.time-adjust button,
+.timer-actions button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.time-adjust button:hover,
+.timer-actions button:hover {
+  background-color: #45a049;
+}
+
+.timer-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.reset button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: #d32f2f;
+}
+
+/* Spotify Section */
+.spotify-section {
+  margin-top: 40px;
+  width: 100%;
+}
+
+iframe {
+  border-radius: 8px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle:focus {
+  outline: none;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+}
+
+body.dark-mode .container {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .timer {
+  color: #fff;
+}
+
+body.dark-mode .time-adjust button,
+body.dark-mode .timer-actions button {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .time-adjust button:hover,
+body.dark-mode .timer-actions button:hover {
+  background-color: #555;
+}
+
+body.dark-mode .reset button {
+  background-color: #ff5722;
+}
+
+body.dark-mode .reset button:hover {
+  background-color: #e64a19;
+}
