@@ -77,7 +77,8 @@ Quando o tempo acaba ou o botão de pausa/reset é acionado, o clearInterval int
  ## 👨‍💻 Autores
  - **Lucas Matos**
  - **Gabriel Santos de Sandes**
-Projeto desenvolvido durante o curso Técnico em Informática.
+
+
 
 
 
