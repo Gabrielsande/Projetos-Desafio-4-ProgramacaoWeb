@@ -1,4 +1,4 @@
-# 🪨 Pedra, Papel ou Tesoura 🎮
+# 🎮 Pedra, Papel ou Tesoura 
 
 Este é um projeto interativo do clássico jogo "Pedra, Papel ou Tesoura", desenvolvido com HTML, CSS e JavaScript. Com visual moderno e responsivo, o jogo oferece placar, animação de carregamento e interface intuitiva.
 
