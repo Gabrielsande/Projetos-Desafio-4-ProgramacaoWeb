@@ -1,45 +1,40 @@
-🕒 Projeto Pomodoro – Cronômetro para Estudo
-Este projeto é um cronômetro digital baseado na técnica Pomodoro, ideal para manter o foco nos estudos ou no trabalho. Com uma interface simples e limpa, permite ao usuário iniciar, pausar e resetar um timer regressivo de 25 minutos, além de ajustar o tempo e ouvir música enquanto estuda.
+# 🕒 Projeto Pomodoro – Cronômetro para Estudo
 
-🎯 Objetivo
-O projeto tem como objetivo aplicar conhecimentos de HTML, CSS e JavaScript, trabalhando com manipulação do DOM, eventos, setInterval e clearInterval, além de aplicar a lógica da técnica Pomodoro de forma interativa.
+Este é um cronômetro digital interativo baseado na técnica Pomodoro, ideal para manter o foco durante os estudos ou tarefas. Com uma interface simples, visual moderno e recursos úteis, ele permite controlar o tempo de maneira eficiente.
+---
 
-📋 Funcionalidades
-⏱️ Timer regressivo de 25:00 minutos (ajustável).
+## 🎯 Objetivo
 
-▶️ Botões de Iniciar, Pausar e Resetar.
+Aplicar conhecimentos de **HTML**, **CSS** e **JavaScript**, utilizando conceitos como **manipulação do DOM**, **eventos**, `setInterval`, `clearInterval`, e alternância de temas. O projeto também demonstra a lógica da técnica Pomodoro aplicada na prática.
+---
 
-🔁 Contagem regressiva atualizada a cada segundo.
+## 📋 Funcionalidades
 
-🌙/☀️ Modo noturno, alternável com botão toggle.
+- ⏱️ **Timer regressivo de 25:00 minutos** (ajustável).
+- ▶️ **Botões de Iniciar, Pausar e Resetar**.
+- 🔁 **Contagem regressiva** com atualização a cada segundo.
+- 🌙/☀️ **Modo noturno e claro** com alternância via botão.
+- 🎵 **Integração com playlist do Spotify** embutida.
+- ⏳ **Ajuste rápido de tempo** (+5 min / -5 min).
+- 🔔 **Alerta automático ao final de cada Pomodoro**.
+---
 
-🎵 Integração com playlist do Spotify.
+## 💡 Sobre a Técnica Pomodoro
 
-⏳ Ajuste do tempo com botões (+5 min / -5 min).
+A Técnica Pomodoro é um método de gerenciamento de tempo que consiste em:
 
-🔊 Alerta ao fim do Pomodoro com alert().
+1. Trabalhar por **25 minutos** (1 Pomodoro);
+2. Fazer uma **pausa curta de 5 minutos**;
+3. A cada 4 Pomodoros, realizar uma **pausa longa**.
 
-💡 Técnica Pomodoro
-A técnica Pomodoro é um método de gerenciamento de tempo que consiste em:
+Esse ciclo ajuda a melhorar o foco, produtividade e a evitar a procrastinação.
+---
 
-Trabalhar por 25 minutos (1 Pomodoro).
+## 🧠 Lógica com `setInterval` e `clearInterval`
 
-Fazer uma pausa curta de 5 minutos.
+A lógica do cronômetro é baseada em temporizadores:
 
-A cada 4 Pomodoros, fazer uma pausa mais longa.
-
-Essa técnica melhora o foco e ajuda a evitar a procrastinação.
-
-🧠 Lógica com setInterval e clearInterval
-O setInterval executa uma função a cada segundo (1000ms), atualizando o tempo na tela.
-
-Quando o tempo acaba ou é pausado/resetado, clearInterval é usado para parar a execução do cronômetro.
-
-Exemplo da lógica usada:
-
-javascript
-Copiar
-Editar
+```javascript
 timerInterval = setInterval(() => {
   if (timerSeconds === 0) {
     if (timerMinutes === 0) {
@@ -55,31 +50,32 @@ timerInterval = setInterval(() => {
   }
   updateTimerDisplay();
 }, 1000);
-🛠️ Como usar/modificar
-Imagens e conteúdo
-Você pode modificar:
+Quando o tempo acaba ou o botão de pausa/reset é acionado, o clearInterval interrompe a execução.
+```
+---
 
-O tempo padrão do cronômetro (alterando timerMinutes no JS).
+## 🛠️ Como Usar ou Modificar
+ - Tempo Padrão: altere a variável timerMinutes no script.js.
 
-A playlist do Spotify (trocando a src do iframe).
+ - Música: troque o src do iframe do Spotify para sua própria playlist.
 
-Modo Noturno
-O botão 🌙/☀️ ativa o modo escuro com .classList.toggle('dark-mode').
+ - Modo Noturno: alternância feita com .classList.toggle('dark-mode').
+---
 
+ ## 📁 Tecnologias Utilizadas
+ - HTML5
+ - CSS3
+ - JavaScript
+---
 
-📁 Tecnologias Utilizadas
-HTML5
+ ## 🔧 Melhorias Futuras
+ - Sons personalizados ao fim do tempo.
+ - Contador de ciclos Pomodoro.
+ - Configuração de pausas curtas e longas.
+ - Notificações no navegador ou desktop.
 
-CSS3
+ ## 👨‍💻 Autores
+Lucas Matos
+Gabriel Santos de Sandes
+Projeto desenvolvido durante o curso Técnico em Informática.
 
-JavaScript
-
-🧪 Melhorias possíveis
-Tocar som personalizado ao terminar o tempo.
-
-Adicionar contagem de ciclos Pomodoro.
-
-Permitir configurar pausas longas/curtas separadamente.
-
-👨‍💻 Autor
-Lucas Matos e Gabriel Santos de Sandes – Projeto desenvolvido no curso técnico em Informática.
